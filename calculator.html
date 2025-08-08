@@ -1,0 +1,189 @@
+<style>
+h1{
+textContent:center;
+margin:30px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column-reverse;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+div{
+align-item:center;
+padding:22px;
+background-color:black;
+border-radius:20px;
+}
+button{
+width:39px;
+margin: 9px;
+border-radius:5px;
+padding:7px;
+background-color:gray;
+}
+.btn{
+width:37px;
+margin: 10px;
+border-radius:5px;
+padding:7px;
+background-color:gray;
+}
+
+input{
+width:230px;
+border-radius:5px;
+padding:10px;
+font-size:25px;
+background-color:gray;
+}
+.tit{
+color:white;
+font-size:20px;
+}
+.log{
+width:48px;
+margin: 3px;
+border-radius:5px;
+padding:7px;
+background-color:gray;
+}
+</style>
+
+<body>
+    <p>Created By Mathi</p>
+
+<div >
+<p class="tit">COSOC</p>
+<input id="value" onkeyup="ress(event)"></input><br><br>
+<button onclick="pi()">PI</button><button onclick="e()">e</button>
+<button onclick="root()"> &radic;</button><button onclick="power()">^</button><br>
+<button onclick="sin()">sin</button><button onclick="cos()">cos</button>
+<button onclick="tan()">tan</button><button  onclick="dot()"><b>.</button>
+<br>
+<button onclick="log()">log</button><button class="log" onclick="logten()">log10</button>
+<button onclick="mod()">%</button><button onclick="clr()">C</button>
+<br>
+<button onclick="abc()">Abs</button><button onclick="bright()">(</button>
+<button onclick="bleft()">)</button><button  onclick="sclr()"><b>&#9003</b></button>
+<br>
+
+<button class="btn" onclick="one()">1</button><button class="btn" onclick="two()">2</button>
+<button class="btn" onclick="three()">3</button><button class="btn" onclick="add()">+</button><br>
+<button class="btn" onclick="four()">4</button><button class="btn" onclick="five()">5</button>
+<button class="btn" onclick="six()">6</button><button class="btn" onclick="sub()">-</button><br>
+<button class="btn" onclick="seven()">7</button><button class="btn" onclick="eight()">8</button>
+<button class="btn" onclick="nine()">9</button><button class="btn" onclick="mul()">*</button><br>
+<button class="btn" onClick="d0()">00</button><button class="btn" onclick="oneee()">0</button>
+<button class="btn" onClick="res()">=</button><button class="btn" onclick="div()">/</button><br>
+</div>
+</body>
+<h1>Scientific Calculator</h1>    
+
+<script>
+let invalue=document.getElementById("value");
+function oneee(){
+invalue.value+=0;
+}
+function ress(event){
+if(event.keyCode===13){
+invalue.value=eval(invalue.value);
+}}
+function one(){
+invalue.value+=1;
+}
+function d0(){
+invalue.value+="00";
+}
+function two(){
+invalue.value+=2;
+}
+function three(){
+invalue.value+=3;
+}
+function four(){
+invalue.value+=4;
+}
+function five(){
+invalue.value+=5;
+}
+function six(){
+invalue.value+=6;
+}
+function seven(){
+invalue.value+=7;
+}
+function eight(){
+invalue.value+=8;
+}
+function nine(){
+invalue.value+=9;
+}
+function add(){
+invalue.value+="+";
+}
+function sub(){
+invalue.value+="-";
+}
+function mul(){
+invalue.value+="*";
+}
+function div(){
+invalue.value+="/";
+}
+function clr(){
+invalue.value=" ";
+}
+function pi(){
+invalue.value+=3.141;
+}
+function e(){
+invalue.value+=2.718;
+}
+function res(){
+invalue.value=eval(invalue.value);
+}
+
+function sin(){
+invalue.value=Math.round(Math.sin(invalue.value));
+}
+function cos(){
+invalue.value=Math.round(Math.cos(invalue.value));
+}
+function bright(){
+invalue.value+="(";
+}
+function bleft(){
+invalue.value+=")";
+}
+function tan(){
+invalue.value=Math.round(Math.tan(invalue.value));
+}
+function log(){
+invalue.value=Math.log(invalue.value);
+}
+function logten(){
+invalue.value=Math.log10(invalue.value);
+}
+function mod(){
+invalue.value+="%";
+}
+function root(){
+invalue.value=Math.sqrt(invalue.value);
+}
+function dot(){
+invalue.value+=".";
+}
+function power(){
+invalue.value+="**";
+}
+function sclr(){
+invalue.value=invalue.value.slice(0,-1);
+}
+function abc(){
+invalue.value=Math.abs(invalue.value);
+}
+</script>
